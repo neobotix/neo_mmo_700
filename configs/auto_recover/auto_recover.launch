@@ -2,7 +2,7 @@
 <launch>
 	
 	<!-- upload parameters -->
-	<rosparam command="load" ns="auto_recover" file="$(find neo_mpo_700)/configs/auto_recover/auto_recover.yaml"/>
+	<rosparam command="load" ns="auto_recover" file="$(find neo_mmo_700)/configs/auto_recover/auto_recover.yaml"/>
 	
 	<!-- start auto_recover node -->
 	<node pkg="neo_auto_recover" type="auto_recover_node" ns="auto_recover" name="auto_recover_node" respawn="false" output="screen">

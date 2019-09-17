@@ -3,8 +3,8 @@
 	<!--Parameter-->
     <!--param name="IniDirectory" value="$(find neo_mpo_700)/ros/launch/cob_can_and_kinematics/IniFiles/"/>
 	<param name="PublishEffort" value="false"/-->
-    <rosparam command="load" file="$(find neo_mpo_700)/configs/kinematics/$(env ROBOT)_CanCtrl.yaml"/>
-    <rosparam command="load" file="$(find neo_mpo_700)/configs/kinematics/$(env ROBOT)_Platform.yaml"/>
+    <rosparam command="load" file="$(find neo_mmo_700)/configs/kinematics/CanCtrl.yaml"/>
+    <rosparam command="load" file="$(find neo_mmo_700)/configs/kinematics/Platform.yaml"/>
 	<!-- base_drive_chain_node -->
 	<node pkg="cob_base_drive_chain" type="cob_base_drive_chain_node" name="base_drive_can_node" respawn="false" output="screen">
 		<remap from="/emergency_stop_state" to="/relayboard_v2/emergency_stop_state"/>
