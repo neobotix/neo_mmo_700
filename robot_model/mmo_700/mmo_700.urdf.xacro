@@ -70,24 +70,23 @@
   </xacro:mmo_700_wheel>
 
 <!-- Sensors -->
-
-  <xacro:sick_v0 name="sick_laser_front" parent="base_link" ros_topic="laser_1/scan">
+  <xacro:sick_v0 name="lidar_1" parent="base_link" ros_topic="laser_1/scan">
     <origin xyz="0.360 0 0.181" rpy="3.14 0 0 " />
   </xacro:sick_v0>
 
-  <xacro:sick_v0 name="sick_laser_back" parent="base_link" ros_topic="laser_2/scan">
+  <xacro:sick_v0 name="lidar_2" parent="base_link" ros_topic="laser_2/scan">
     <origin xyz="-0.360 0 0.181" rpy="3.14 0 3.14" />
   </xacro:sick_v0>
 
  <!--+++++++++++++++++++ IMU ++++++++++++++++++++++++-->
-  <!-- SENSORS --> 
+ <!-- Comment or uncomment based on your requirement -->
   <xacro:include filename="$(find neo_mmo_700)/robot_model/mmo_700/urdf/xacros/imu.xacro" />
   <xacro:imu name="imu_1" parent="base_link">
     <origin xyz="0.100 0 0.300" rpy="0 0 3.14" />
   </xacro:imu>
 
   <!--+++++++++++++++++++ Ultra Sonic ++++++++++++++++++++++++-->
-  
+  <!-- Comment or uncomment based on your requirement -->
   <xacro:include filename="$(find neo_mmo_700)/robot_model/mmo_700/urdf/xacros/ultrasonic.xacro" />
   <!-- SENSOR 1 --> 
   <!-- xacro:us_sensor name="us_1" parent="base_link">
@@ -173,3 +172,4 @@
 
 
 </robot>
+
