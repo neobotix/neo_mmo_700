@@ -16,7 +16,7 @@
 	<include file="$(find neo_mmo_700)/configs/lidar/lidar.launch"/>
 
 	<!--IMU-->
-	<include file="$(find neo_mpo_700)/configs/imu/phidgets/phidgets_imu.launch"/>
+	<include file="$(find neo_mmo_700)/configs/imu/phidgets/phidgets_imu.launch"/>
 
 	<!--neobotix basic joystick node-->
     <include file="$(find neo_mmo_700)/configs/teleop/teleop.launch"/>
