@@ -6,6 +6,8 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /TF1
+        - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 775
   - Class: rviz/Selection
@@ -51,73 +53,18 @@ Visualization Manager:
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
-      Enabled: true
+      Enabled: false
       Links:
         All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        lidar_1_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        lidar_2_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        mpo_700_head_0_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        mpo_700_head_1_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        mpo_700_head_2_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        mpo_700_head_3_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        wheel_0_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        wheel_1_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        wheel_2_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        wheel_3_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
-      Value: true
+      Value: false
       Visual Enabled: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
@@ -210,19 +157,198 @@ Visualization Manager:
       Use rainbow: true
       Value: false
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
+        H1_F1_link_1:
+          Value: false
+        H1_F1_link_2:
+          Value: false
+        H1_F1_optoforce:
+          Value: false
+        H1_F1_palm_link:
+          Value: false
+        H1_F1_tip:
+          Value: false
+        H1_F1_ur10_base_link:
+          Value: false
+        H1_F2_link_1:
+          Value: false
+        H1_F2_link_2:
+          Value: false
+        H1_F2_optoforce:
+          Value: false
+        H1_F2_palm_link:
+          Value: false
+        H1_F2_tip:
+          Value: false
+        H1_F2_ur10_base_link:
+          Value: false
+        H1_F3_link_1:
+          Value: false
+        H1_F3_link_2:
+          Value: false
+        H1_F3_optoforce:
+          Value: false
+        H1_F3_palm_link:
+          Value: false
+        H1_F3_tip:
+          Value: false
+        H1_F3_ur10_base_link:
+          Value: false
+        H1_base_attach:
+          Value: false
+        H1_insert_F1:
+          Value: false
+        H1_insert_F2:
+          Value: false
+        H1_insert_F3:
+          Value: false
+        H1_ur10_base_link:
+          Value: false
+        H1_wrist_attach:
+          Value: false
+        base:
+          Value: false
+        base_link:
+          Value: true
+        cabinet_link:
+          Value: false
+        ee_link:
+          Value: false
+        forearm_link:
+          Value: false
+        imu_1_link:
+          Value: true
+        lidar_1_link:
+          Value: true
+        lidar_2_link:
+          Value: true
+        mmo_700_head_0_link:
+          Value: false
+        mmo_700_head_1_link:
+          Value: false
+        mmo_700_head_2_link:
+          Value: false
+        mmo_700_head_3_link:
+          Value: false
+        odom:
+          Value: false
+        shoulder_link:
+          Value: false
+        tool0:
+          Value: false
+        upper_arm_link:
+          Value: false
+        ur10_base_link:
+          Value: false
+        us_1_link:
+          Value: false
+        us_2_link:
+          Value: false
+        us_3_link:
+          Value: false
+        us_4_link:
+          Value: false
+        us_5_link:
+          Value: false
+        us_6_link:
+          Value: false
+        wheel_0_link:
+          Value: false
+        wheel_1_link:
+          Value: false
+        wheel_2_link:
+          Value: false
+        wheel_3_link:
+          Value: false
+        wrist_1_link:
+          Value: false
+        wrist_2_link:
+          Value: false
+        wrist_3_link:
+          Value: false
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        odom:
+          base_link:
+            cabinet_link:
+              ur10_base_link:
+                base:
+                  {}
+                shoulder_link:
+                  upper_arm_link:
+                    forearm_link:
+                      wrist_1_link:
+                        wrist_2_link:
+                          wrist_3_link:
+                            ee_link:
+                              H1_base_attach:
+                                H1_wrist_attach:
+                                  H1_ur10_base_link:
+                                    H1_insert_F1:
+                                      H1_F1_palm_link:
+                                        H1_F1_ur10_base_link:
+                                          H1_F1_link_1:
+                                            H1_F1_link_2:
+                                              H1_F1_tip:
+                                                H1_F1_optoforce:
+                                                  {}
+                                    H1_insert_F2:
+                                      H1_F2_palm_link:
+                                        H1_F2_ur10_base_link:
+                                          H1_F2_link_1:
+                                            H1_F2_link_2:
+                                              H1_F2_tip:
+                                                H1_F2_optoforce:
+                                                  {}
+                                    H1_insert_F3:
+                                      H1_F3_palm_link:
+                                        H1_F3_ur10_base_link:
+                                          H1_F3_link_1:
+                                            H1_F3_link_2:
+                                              H1_F3_tip:
+                                                H1_F3_optoforce:
+                                                  {}
+                            tool0:
+                              {}
+            imu_1_link:
+              {}
+            lidar_1_link:
+              {}
+            lidar_2_link:
+              {}
+            mmo_700_head_0_link:
+              wheel_0_link:
+                {}
+            mmo_700_head_1_link:
+              wheel_1_link:
+                {}
+            mmo_700_head_2_link:
+              wheel_2_link:
+                {}
+            mmo_700_head_3_link:
+              wheel_3_link:
+                {}
+            us_1_link:
+              {}
+            us_2_link:
+              {}
+            us_3_link:
+              {}
+            us_4_link:
+              {}
+            us_5_link:
+              {}
+            us_6_link:
+              {}
       Update Interval: 0
-      Value: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -248,25 +374,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 7.74059296
+      Distance: 4.56716156
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.238135085
-        Y: -0.252642006
-        Z: 0.267244458
+        X: 1.52580369
+        Y: -0.900739372
+        Z: 0.351198763
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.905200243
+      Pitch: 1.4847964
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.20405817
+      Yaw: 4.5840764
     Saved: ~
 Window Geometry:
   Displays:
