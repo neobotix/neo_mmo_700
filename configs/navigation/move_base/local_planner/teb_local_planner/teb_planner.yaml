@@ -156,16 +156,6 @@ TebLocalPlannerROS:
  #Parameter obstacle_association_force_inclusion_factor is processed first. 
  #[This parameter is used only if parameter legacy_obstacle_association is false]
 
-############################
-###Only if using Costmap Converter plugins
-############################
-
- #costmap_converter_plugin
-
- #costmap_converter_spin_thread
-
- #costmap_converter_rate
-
 ####################################################
 #Optimization Parameters
 ####################################################
@@ -296,6 +286,8 @@ TebLocalPlannerROS:
 
  map_frame: map
  #Global planning frame (in case of a static map, this parameter must be usually changed to "/map".
+
+
 
 
 
