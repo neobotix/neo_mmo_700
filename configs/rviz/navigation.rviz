@@ -484,12 +484,12 @@ Visualization Manager:
       Class: rviz/Map
       Color Scheme: costmap
       Draw Behind: false
-      Enabled: false
+      Enabled: true
       Name: LocalCostMap
       Topic: /move_base/local_costmap/costmap
       Unreliable: false
       Use Timestamp: false
-      Value: false
+      Value: true
     - Alpha: 1
       Arrow Length: 0.300000012
       Axes Length: 0.300000012
@@ -570,7 +570,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: map
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:
@@ -591,25 +591,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 15.5451632
+      Distance: 5.08802366
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.828060985
-        Y: 0.642198086
-        Z: 0.684348702
+        X: -0.159846798
+        Y: -0.197091475
+        Z: -0.104796939
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.50979638
+      Pitch: 0.744796932
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.436861217
+      Yaw: 1.71689498
     Saved: ~
 Window Geometry:
   Displays:
@@ -627,5 +627,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1855
-  X: 65
+  X: 1985
   Y: 24
