@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="mpo_700">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="mmo_700">
 
   <xacro:macro name="mpo_700_base" params="name">
     <link name="${name}">
