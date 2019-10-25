@@ -14,7 +14,17 @@
   <xacro:include filename="$(find neo_mmo_700)/robot_model/mmo_700/urdf/xacros/mpo_700_body.xacro" />
 
   <!-- SENSORS --> 
-  <xacro:include filename="$(find neo_mmo_700)/robot_model/mmo_700/urdf/xacros/sick_laser.xacro" />
+  <!-- Sick S300 - Comment/Uncomment if required  -->
+
+  <xacro:include filename="$(find neo_mmo_700)/robot_model/mmo_700/urdf/xacros/sick_S300.xacro" />
+
+  <!-- Microscan - Comment/Uncomment if required -->
+  <!-- <xacro:include filename="$(find neo_mmo_700)/robot_model/mmo_700/urdf/xacros/micro_scan.xacro" /> -->
+
+  <!-- USS and IMU - Comment/Uncomment if required  -->
+  <!-- <xacro:include filename="$(find neo_mmo_700)/robot_model/mmo_700/urdf/xacros/imu.xacro" />
+  
+    <xacro:include filename="$(find neo_mmo_700)/robot_model/mmo_700/urdf/xacros/ultrasonic.xacro" /> -->
 
   <!-- Gazebo --> 
   <xacro:include filename="$(find neo_mmo_700)/robot_model/mmo_700/urdf/xacros/mpo_700_gazebo.xacro" />
@@ -71,24 +81,24 @@
 
 <!-- Sensors -->
 
-  <xacro:sick_v0 name="sick_laser_front" parent="base_link" ros_topic="laser_1/scan">
-    <origin xyz="0.360 0 0.181" rpy="3.14 0 0 " />
-  </xacro:sick_v0>
+  <xacro:sick_laser_v0 name="lidar_1" parent="base_link" ros_topic="lidar_1/scan_filtered">
+  <!--<origin xyz="0.360 0 0.181" rpy="3.14 0 0" />--> 
+    <origin xyz="0.338 0.288 0.223" rpy="3.14 0 0.79" /> <!-- Scanners on the side -->
+  </xacro:sick_laser_v0>
 
-  <xacro:sick_v0 name="sick_laser_back" parent="base_link" ros_topic="laser_2/scan">
-    <origin xyz="-0.360 0 0.181" rpy="3.14 0 3.14" />
-  </xacro:sick_v0>
+  <xacro:sick_laser_v0 name="lidar_2" parent="base_link" ros_topic="lidar_2/scan_filtered">
+  <!--<origin xyz="-0.360 0 0.181" rpy="3.14 0 3.14" />-->
+    <origin xyz="-0.338 -0.288 0.223" rpy="3.14 0 3.93" /> <!-- Scanners on the side -->
+  </xacro:sick_laser_v0>
 
- <!--+++++++++++++++++++ IMU ++++++++++++++++++++++++-->
-  <!-- SENSORS --> 
-  <xacro:include filename="$(find neo_mmo_700)/robot_model/mmo_700/urdf/xacros/imu.xacro" />
-  <xacro:imu name="imu_1" parent="base_link">
+     <!--+++++++++++++++++++ IMU ++++++++++++++++++++++++-->
+ <!-- Comment or uncomment based on your requirement -->
+<!--   <xacro:imu name="imu_1" parent="base_link">
     <origin xyz="0.100 0 0.300" rpy="0 0 3.14" />
-  </xacro:imu>
+  </xacro:imu> -->
 
   <!--+++++++++++++++++++ Ultra Sonic ++++++++++++++++++++++++-->
-  
-  <xacro:include filename="$(find neo_mmo_700)/robot_model/mmo_700/urdf/xacros/ultrasonic.xacro" />
+  <!-- Comment or uncomment based on your requirement -->
   <!-- SENSOR 1 --> 
   <!-- xacro:us_sensor name="us_1" parent="base_link">
     <origin xyz="0.100 0 0.300" rpy="0 3.14 3.14" />
@@ -153,7 +163,7 @@
   <!-- xacro:us_sensor name="us_16" parent="base_link">
     <origin xyz="0.230 0 0.300" rpy="0 3.14 3.14" />
   </xacro:us_sensor-->
-    
+
 
   <!--cabinet-->
   <xacro:mmo_700_cabinet name="cabinet" parent="base_link">
@@ -169,7 +179,5 @@
      wrist_2_lower_limit="${-pi}" wrist_2_upper_limit="${pi}"
      wrist_3_lower_limit="${-pi}" wrist_3_upper_limit="${pi}">
   </xacro:ur10_robot>
-
-
 
 </robot>
